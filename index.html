@@ -248,16 +248,29 @@
                 <div class="content">
                     <h2 class="title is-3">GPU Benchmark</h2>
                     <p style="display: flex; justify-content: center;">
-                        <img src="static/images/GridSize_KPS.png" alt="ProbeX Overview"
+                        <img src="static/images/GridSize_KPS.png" alt="GPU Grid Size and Key Generation Speed"
                              class="blend-img-background center-image" style="max-width: 65%; height: auto;"/>
                     </p>
                     <p>
-                        Our study examined several consumer-grade GPUs, such as the RTX 3070, RTX 3080, and RTX 4090,
-                        as well as data center-grade GPUs, the A100 (80GB) and H100 (80GB).
-
-                        Although the H100 achieves the highest key generation speed, its prohibitively high cost makes
-                        the RTX 3080 a more economical option for performance.
+                    Our work fundamentally attempted to brute-force search private keys of a given public key
+                        (details can be found in paper).
+                    To validate our hypothesis, we modified an open-source project VanitiySearch,
+                    and implemented SECP224R1 - the curve used by FindMy. We utilized GPU to accelerate the process.
+                    Our study examined several consumer-grade GPUs, such as the RTX 3070, RTX 3080, and RTX 4090,
+                    as well as data center-grade GPUs, the A100 (80GB) and H100 (80GB).
                     </p>
+
+                    <h2 class="title is-3">Cost Efficiency</h2>
+                    <p style="display: flex; justify-content: center;">
+                        <img src="static/images/cost-listing.png" alt="Cost Efficiency"
+                             class="blend-img-background center-image" style="max-width: 65%; height: auto;"/>
+                    </p>
+                    Although the H100 achieves the highest key generation speed, its prohibitively high cost makes
+                    the RTX 3080 a more economical option for performance. According to our GPU performance comparison data,
+                    the RTX 3080's key generation rate (4.9G Key/s) reaches 54% of the professional computing card A100,
+                    while its rental cost is only 12.5% of the A100, making its cost-effectiveness significantly superior
+                    to other hardware solutions. With the use of 200 RTX3080s,
+                    there is a 90% probability of finding a matching private key for such attack in 3 minutes.
 
                 </div>
             </div>
