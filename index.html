@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
     <!-- Replace the content tag with appropriate information -->
-    <meta name="description" content="DESCRIPTION META TAG">
+    <meta name="description"
+          content="A security vulnerability that allows tracking of Bluetooth devices using Apple's Find My network">
     <meta property="og:title" content="nRootTag - Tracking You from a Thousand Miles Away!"/>
-    <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+    <meta property="og:description"
+          content="Research on how Apple's Find My network can be exploited to track non-Apple devices"/>
     <meta property="og:url" content="https://nroottag.github.io/"/>
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
     <meta property="og:image" content="static/images/main.jpg"/>
@@ -20,7 +22,7 @@
     <!--    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">-->
     <!--    <meta name="twitter:card" content="summary_large_image">-->
     <!-- Keywords for your paper to be indexed by-->
-    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="keywords" content="security, privacy, bluetooth tracking, find my network, airtag">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -83,24 +85,7 @@
                     </a>
                   </span>
 
-                        <span class="link-block">
-                      <a href="https://doi.org/10.5281/zenodo.14728530" target="_blank"
-                         class="external-link button is-normal is-rounded is-dark">
-                          <span class="icon" style="vertical-align: middle; font-size: 20px;">&#128230;</span>
-                          <span style="vertical-align: middle;">Permanent Artifact</span>
-                      </a>
-                  </span>
 
-                            <!-- Docker link -->
-                            <span class="link-block">
-                    <a href="https://hub.docker.com/r/chiba765/nroottag-seeker" target="_blank"
-                       class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-docker"></i>
-                    </span>
-                    <span>Docker Image</span>
-                  </a>
-                </span>
                             <!-- Github link -->
                             <span class="link-block">
                     <a href="https://github.com/Chapoly1305/nroottag/discussions" target="_blank"
@@ -108,14 +93,9 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Discussion</span>
+                    <span>Code & Discussion</span>
                   </a>
                 </span>
-
-
-                            <!-- Dataset -->
-
-
 
                         </div>
                     </div>
@@ -135,7 +115,7 @@
             </p>
             <br>
             <p>
-                A remote attacker can exploit this vulnerability to turn your device—whether it’s a desktop, smartphone,
+                A remote attacker can exploit this vulnerability to turn your device—whether it's a desktop, smartphone,
                 or smartwatch—into an AirTag-like tracker, enabling the attacker to track your location.
                 How does it work? Over 1.5 billion iPhones could act as free tracking agents for the attacker worldwide.
             </p>
@@ -148,25 +128,19 @@
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
-                <h2 class="title is-3">Abstract</h2>
+                <h2 class="title is-3">What Is This All About?</h2>
                 <div class="content has-text-justified">
                     <p>
-                        Apple’s Find My network, leveraging over a billion active Apple devices, is the world’s largest
-                        device-locating network.
-                        We investigate the potential misuse of this network to maliciously track Bluetooth devices. We
-                        present <em>nRootTag</em>,
-                        a novel attack method that transforms computers into trackable “AirTags” without requiring root
-                        privileges.
-                        The attack achieves a success rate of over 90% within minutes at a cost of only a few US
-                        dollars.
-                        Or, a rainbow table can be built to search keys instantly.
-                        Subsequently, it can locate a computer in minutes, posing a substantial risk to user privacy and
-                        safety.
-                        The attack is effective on Linux, Windows, and Android systems, and can be employed to track
-                        desktops, laptops,
-                        smartphones, and IoT devices.
-                        Our comprehensive evaluation demonstrates nRootTag’s effectiveness and efficiency across various
-                        scenarios.
+                        Imagine someone could turn your laptop, smartphone, or even your gaming console into a tracking
+                        device without your knowledge. Our research team discovered a way this can happen through
+                        Apple's Find My network - the same system that helps people find their lost iPhones and AirTags.
+
+                        The Find My network uses over a billion Apple devices worldwide. When an AirTag is lost, it
+                        sends out Bluetooth signals that nearby iPhones pick up. These iPhones then secretly report the
+                        AirTag's location to Apple's cloud, allowing the owner to see where their lost item is.
+
+                        We found a security problem that lets hackers use this system to track almost any device with
+                        Bluetooth capabilities - not just Apple products. We call this attack "nRootTag."
                     </p>
                 </div>
             </div>
@@ -181,24 +155,51 @@
         <div class="columns is-centered">
             <div class="column is-full">
                 <div class="content">
-                    <h2 class="title is-3">Overview of Find My Offline Finding</h2>
-                    <p style="display: flex; justify-content: center;">
-                        <img src="static/images/findmy_overview.jpg" alt="Overview"
-                             class="blend-img-background center-image" style="max-width: 75%; height: auto;"/>
+                    <h2 class="title is-3">Who Would Be Interested?</h2>
+                    <p>
+                        Many different groups might be interested in using this tracking technology, each for their own
+                        purposes:
                     </p>
                     <p>
-                        Figure illustrates the overview of Find My offline finding.
-                        (1) Through pairing, an AirTag shares the public / private key
-                        information with the owner’s device. (2) When the AirTag is
-                        separated from the paired device, it advertises its public key
-                        via BLE advertisements, known as lost messages. (3) Nearby
-                        Apple devices, referred to as finders, generate encrypted lo
-                        cation reports and send them, along with the hashed public
-                        key, to the Apple Cloud. (4) The Apple Cloud allows anyone
-                        to use a hashed public key to retrieve the associated location
-                        reports, which can only be decrypted using the correct private
-                        key. To ensure anonymity, finders do not authenticate whether
-                        a lost message is sent from an Apple device.
+                        <b>Marketing and advertising companies</b> could use this to track consumer movement patterns
+                        without
+                        having to install expensive tracking equipment in stores. By understanding where people go and
+                        how much time they spend in different locations, they can create more targeted advertising
+                        campaigns.
+                    </p>
+                    <p>
+                        <b>Shopping apps and social media platforms </b>might use this technology to track users'
+                        locations
+                        without explicitly asking for GPS permission. They could learn where you shop, what restaurants
+                        you visit, and other habits to send you personalized recommendations and ads. This data becomes
+                        extremely valuable when combined with your online browsing and purchasing history.
+                    </p>
+                    <p>
+                        <b>Data brokers and analytics firms </b> collect and sell information about consumers. This
+                        tracking
+                        method would give them another source of valuable location data to enhance their profiles about
+                        individuals, which they then sell to other businesses, political campaigns, or anyone willing to
+                        pay.
+                    </p>
+                    <p>
+                        <b>Government intelligence and law enforcement agencies </b> might be interested in this
+                        technology for
+                        surveillance purposes. They could potentially track specific individuals by getting them to
+                        install software containing this tracking code. Unlike traditional tracking methods, this
+                        approach wouldn't require physical trackers or direct access to cell tower data.
+                    </p>
+                    <p>
+                        <b>Hackers and cybercriminals </b> could use this tracking to identify when valuable devices are
+                        away
+                        from secure locations or to determine when people aren't home. This information could help them
+                        plan more effective device thefts or home break-ins. The method is particularly attractive
+                        because it's difficult to detect and doesn't require expensive equipment.
+                    </p>
+                    <p>
+                        <b>Stalkers and people with harmful intent</b> might use this technology to track specific
+                        individuals.
+                        Unlike physical trackers that might be discovered, this software-based approach is virtually
+                        undetectable to the average person.
                     </p>
                 </div>
             </div>
@@ -212,28 +213,29 @@
         <div class="columns is-centered">
             <div class="column is-full">
                 <div class="content">
-                    <h2 class="title is-3">Architecture of nRootTag</h2>
-                    <div class="level-set has-text-justified">
-                        <p style="display: flex; justify-content: center;">
-                            <img src="static/images/architecture.webp" alt="Sizes of model trees"
-                                 class="blend-img-background center-image" style="max-width: 80%; height: auto;"/>
-                        </p>
-                        <p>
-                            Figure illustrates the architecture of our design.
-                            (1) The Trojan code runs on the computer to be tracked. It retrieves the
-                            advertising address, acquires the matching public key from our server, and then advertises
-                            lost messages.
-                            (2) The Server processes requests for acquiring public keys through rainbow table
-                            lookup or online key search.
-                            (3) The Database system, which contains a rainbow table of key information,
-                            provides the corresponding public/private key pair for a given advertising address.
-                            (4) The Key Generation and Search serves two purposes: it is used to precompute the
-                            rainbow table,
-                            and invoked to search for a matching public/private key pair on the fly.
-                            Finally, given a public key, the server uses its hash value to query the Apple Cloud for
-                            location reports, then decrypts the reports using the private key.
-                        </p>
-                    </div>
+                    <h2 class="title is-3">What Are the Prerequisites?</h2>
+                    <p>
+                        For someone to track your device using this method, they would need:
+                    </p>
+                    <p>
+                        <b>1. Malicious App installed.</b> The attacker needs to get you to run their software on your
+                        device. This could happen if you download an app that secretly contains tracking code, or
+                        planted by a USB drive.
+                    </p>
+                    <p>
+                        <b>2. BLE capability.</b> Your device must have Bluetooth hardware, and it must be turned on,
+                        which is usually the case. Most modern laptops, phones, and many other gadgets have Bluetooth,
+                        and after device activation, the Bluetooth remains turned on by default. Unfortunately, users of
+                        Linux, Windows, and Android (versions before 13) cannot prevent Bluetooth from being turned on.
+                        This is due to a system feature that allows applications to turn on Bluetooth without user
+                        interaction.
+
+                    </p>
+                    <p>
+                        <b>3. Surrounded by FindMy network.</b> There must be Apple devices (iPhones, iPads, etc.)
+                        passing near your device occasionally to pick up and relay the tracking signals, regardless on
+                        the ground or in the air.
+                    </p>
                 </div>
             </div>
         </div>
@@ -246,36 +248,20 @@
         <div class="columns is-centered">
             <div class="column is-full">
                 <div class="content">
-                    <h2 class="title is-3">GPU Benchmark</h2>
-                    <p style="display: flex; justify-content: center;">
-                        <img src="static/images/GridSize_KPS.png" alt="GPU Grid Size and Key Generation Speed"
-                             class="blend-img-background center-image" style="max-width: 65%; height: auto;"/>
-                    </p>
+                    <h2 class="title is-3">Which Devices Can Be Attacked?</h2>
                     <p>
-                    Our work fundamentally attempted to brute-force search private keys of a given public key
-                        (details can be found in paper).
-                    To validate our hypothesis, we modified an open-source project VanitiySearch,
-                    and implemented SECP224R1 - the curve used by FindMy. We utilized GPU to accelerate the process.
-                    Our study examined several consumer-grade GPUs, such as the RTX 3070, RTX 3080, and RTX 4090,
-                    as well as data center-grade GPUs, the A100 (80GB) and H100 (80GB).
+                        Device with Bluetooth Low Energy could be affected, including:
+                        Laptops and desktop computers running Windows, Linux, or older versions of macOS;
+                        Android smartphones and tablets;
+                        Gaming consoles like the Steam Deck;
+                        Smart TVs from manufacturers like Sony;
+                        Virtual reality headsets like the Meta Quest;
+                        Raspberry Pi and other small IoT computing devices;
+                        Other Bluetooth-enabled devices like e-bikes and scooters.
                     </p>
-
-                    <h2 class="title is-3">Cost Efficiency</h2>
-                    <p style="display: flex; justify-content: center;">
-                        <img src="static/images/cost-listing.png" alt="Cost Efficiency"
-                             class="blend-img-background center-image" style="max-width: 65%; height: auto;"/>
-                    </p>
-                    Although the H100 achieves the highest key generation speed, its prohibitively high cost makes
-                    the RTX 3080 a more economical option for performance. According to our GPU performance comparison data,
-                    the RTX 3080's key generation rate (4.9G Key/s) reaches 54% of the professional computing card A100,
-                    while its rental cost is only 12.5% of the A100, making its cost-effectiveness significantly superior
-                    to other hardware solutions. With the use of 200 RTX3080s,
-                    there is a 90% probability of finding a matching private key for such attack in 3 minutes.
-
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </section>
 
@@ -285,42 +271,177 @@
         <div class="columns is-centered">
             <div class="column is-full">
                 <div class="content">
-                    <h2 class="title is-3">Acknowledgments</h2>
+                    <h2 class="title is-3">How Does It Work?</h2>
+                    <p style="display: flex; justify-content: center;">
+                        <img src="static/images/architecture.webp" alt="Attack architecture"
+                             class="blend-img-background center-image" style="max-width: 80%; height: auto;"/>
+                    </p>
                     <p>
-                        This work was supported in part by the US National Science Foundation (NSF) under grants
-                        CNS-2304720, CNS-2310322, CNS-2309550, and
-                        CNS-2309477. It was also supported in part by the Commonwealth Cyber Initiative (CCI).
-                        The authors extend their gratitude to the anonymous reviewers and shepherd for their invaluable
-                        feedback and suggestions. We also acknowledge Google Earth for the map tiles used in our
-                        figures.
-                        <br>
-                        <br>
-                        In addition, we appreciate the help from the Apple Security Team for their prompt responses and
-                        acknowledgement. Apple recently released patches in
-                        iOS 18.2,
-                        visionOS 2.2,
-                        iPadOS 17.7.3, 18.2,
-                        watchOS 11.2,
-                        tvOS 18.2,
-                        macOS Ventura 13.7.2, Sonoma 14.7.2, Sequoia 15.2 to fix the vulnerability. However, the attack
-                        remains effective as long as unpatched iPhones or Apple Watches are in the proximity of the
-                        computer running our trojan.
-<!--                        We extend our gratitude to William Flores-->
-<!--                        <a href="https://www.linkedin.com/in/willlflow/" class="icon">-->
-<!--                            <i class="fab fa-linkedin"></i>-->
-<!--                        </a>-->
-<!--                        for his expert consultancy in CUDA and C++ development.-->
+                        The attack works in four main steps:
+                    </p>
+                    <p>
+                        1. A piece of malicious software (which we call a "Trojan") runs on your device and gets
+                        information about your device's Bluetooth address.
+                    </p>
+                    <p>
+                        2. This software connects to a server controlled by the attacker, which performs complex
+                        calculations to create a special key that matches your device's Bluetooth identity.
+                    </p>
+                    <p>
+                        3. Your device then starts broadcasting signals that make it look like an AirTag to nearby Apple
+                        devices.
+                    </p>
+                    <p>
+                        4. Any iPhones or iPads (participated Find My)that pass nearby will pick up these signals and
+                        report the location to
+                        Apple's cloud, thinking they're helping someone find a lost AirTag. The attacker can then access
+                        these location reports.
+                    </p>
+                    <p>
+                        The attacker doesn't need to be anywhere near you - they can track your location from thousands
+                        of miles away as long as there are Apple devices passing near you.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section hero is-small">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column is-full">
+                <div class="content">
+                    <h2 class="title is-3">How Accurate Is the Tracking?</h2>
+                    <p>
+                        Our tests showed that in homes and offices, the tracking can be accurate within 3 meters (about
+                        10 feet). Even on a moving e-bike, the system could track location within about 50 meters.
+
+                        We even tested it on an airplane, and while the accuracy was lower (about 70 meters), it was
+                        still good enough to reconstruct the entire flight path and identify the flight number.
+
+                        The time it takes to get the first location report is typically between 6-15 minutes, depending
+                        on how many Apple devices are nearby.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section hero is-small">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column is-full">
+                <div class="content">
+                    <h2 class="title is-3">How Practical is the Attack?</h2>
+                    <p>
+                        Without using hypothetical super computers in the future, the attack can be carried out with
+                        <b>today's hardware</b>. For a single-use attack, the cost is equivalent to a <b>bottle of soft drink</b>
+                        (~$2.2).
+
+                        The cost can be further reduced if the attacker aims at a large number of devices, particularly
+                        against Linux systems. Attackers can store every key for Linux in a single hard drive at the
+                        cost of $600.
+
+                        The attack is surprisingly time-efficient. Once set up, an attacker can locate a device <b>within
+                        minutes</b>.
+
+                        The attack is also stealthy. The attacker can set the tracking signal to appear as MacBooks,
+                        which Apple considers "irrelevant" for tracking purposes, <b>avoiding unwanted tracking alerts</b>.
+
+                        In summary, this attack combines affordability, speed, stealth, and scalability, making it a
+                        serious privacy concern for users of Linux, Windows, and Android devices with Bluetooth
+                        capabilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section hero is-small">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column is-full">
+                <div class="content">
+                    <h2 class="title is-3">Has This Problem Been Fixed?</h2>
+                    <p>
+                        Apple released patches in December 2024 (<a
+                            href="https://support.apple.com/en-us/121837#:~:text=for%20their%20assistance.-,Proximity,-We%20would%20like">iOS
+                        18.2</a>, <a
+                            href="https://support.apple.com/en-us/121845#:~:text=for%20their%20assistance.-,Proximity,-We%20would%20like">visionOS
+                        2.2</a>, <a
+                            href="https://support.apple.com/en-us/121838#:~:text=for%20their%20assistance.-,Proximity,-We%20would%20like">iPadOS
+                        17.7.3</a>, <a
+                            href="https://support.apple.com/en-us/121837#:~:text=for%20their%20assistance.-,Proximity,-We%20would%20like">18.2</a>,
+                        <a
+                                href="https://support.apple.com/en-us/121843#:~:text=for%20their%20assistance.-,Proximity,-We%20would%20like">watchOS
+                            11.2</a>, <a
+                            href="https://support.apple.com/en-us/121844#:~:text=for%20their%20assistance.-,Proximity,-We%20would%20like">tvOS
+                        18.2</a>, <a
+                            href="https://support.apple.com/en-us/121842#:~:text=for%20their%20assistance.-,Proximity,-We%20would%20like">macOS
+                        Ventura 13.7.2</a>, <a
+                            href="https://support.apple.com/en-us/121840#:~:text=for%20their%20assistance.-,Proximity,-We%20would%20like">macOS
+                        Sonoma 14.7.2</a>, <a
+                            href="https://support.apple.com/en-us/121839#:~:text=for%20their%20assistance.-,Proximity,-We%20would%20like">Sequoia
+                        15.2</a>) to fix this vulnerability.
+                    </p>
+                    <p>
+                        However, the attack remains effective as long as there are unpatched iPhones or Apple Watches
+                        near the tracked device. Since many people don't update their devices right away, this
+                        vulnerability could remain exploitable for some time.
                     </p>
 
                     <p style="display: flex; justify-content: center;">
-                        <img src="static/images/apple_security_update.png" alt="Model retrieval"
+                        <img src="static/images/apple_security_update.png" alt="Apple security update"
                              class="blend-img-background center-image" style="max-width: 80%; height: auto;"/>
                     </p>
                     <p style="display: flex; justify-content: center;">
-                        <img src="static/images/apple_acknowledgement.png" alt="Model retrieval"
+                        <img src="static/images/apple_acknowledgement.png" alt="Apple acknowledgement"
                              class="blend-img-background center-image" style="max-width: 90%; height: auto;"/>
                     </p>
 
+                    <h2 class="title is-3">How Can I Protect Myself?</h2>
+                    <p>
+                        To protect yourself from this kind of tracking:
+                    </p>
+                    <p>
+                        <b>Install apps from trusted source.</b> Be careful about what apps you install, only download
+                        apps from trusted sources.
+                    </p>
+                    <p>
+                        <b>Manage Bluetooth permission.</b> Be cautious about giving Bluetooth permissions to apps that
+                        don't obviously need them. When not
+                        using Bluetooth, consider revoke applications' Bluetooth permission.
+                    </p>
+                    <p>
+                        <b>Install security patches.</b> Keep your devices updated with the latest security
+                        patches, reduce the risk of being attacked by known vulnerabilities. Apple user can also help to
+                        protect others by updating their devices and reducing the vulnerable Find My network
+                        coverage.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section hero is-small">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column is-full">
+                <div class="content">
+                    <h2 class="title is-3">About Our Research</h2>
+                    <p>
+                        This work was supported in part by the US National Science Foundation (NSF) under grants
+                        CNS-2304720, CNS-2310322, CNS-2309550, and CNS-2309477. It was also supported in part by the
+                        Commonwealth Cyber Initiative (CCI). Our goal in publishing this information is to raise
+                        awareness about privacy risks in widely used technology and to encourage better security
+                        practices.
+                    </p>
                 </div>
             </div>
         </div>
