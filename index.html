@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
     <!-- Replace the content tag with appropriate information -->
-    <meta name="description"
-          content="A security vulnerability that allows tracking of Bluetooth devices using Apple's Find My network">
-    <meta property="og:title" content="nRootTag - Tracking You from a Thousand Miles Away!"/>
-    <meta property="og:description"
-          content="Research on how Apple's Find My network can be exploited to track non-Apple devices"/>
-    <meta property="og:url" content="https://nroottag.github.io/"/>
+    <meta content="A security vulnerability that allows tracking of Bluetooth devices using Apple's Find My network"
+          name="description">
+    <meta content="nRootTag - Tracking You from a Thousand Miles Away!" property="og:title"/>
+    <meta content="Research on how Apple's Find My network can be exploited to track non-Apple devices"
+          property="og:description"/>
+    <meta content="https://nroottag.github.io/" property="og:url"/>
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-    <meta property="og:image" content="static/images/main.jpg"/>
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/>
+    <meta content="static/images/main.jpg" property="og:image"/>
+    <meta content="1200" property="og:image:width"/>
+    <meta content="630" property="og:image:height"/>
 
 
     <!--    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">-->
@@ -22,22 +22,22 @@
     <!--    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">-->
     <!--    <meta name="twitter:card" content="summary_large_image">-->
     <!-- Keywords for your paper to be indexed by-->
-    <meta name="keywords" content="security, privacy, bluetooth tracking, find my network, airtag">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="security, privacy, bluetooth tracking, find my network, airtag" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
 
     <title>Tracking You from a Thousand Miles Away!</title>
-    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link href="static/images/favicon.ico" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
           rel="stylesheet">
 
-    <link rel="stylesheet" href="static/css/bulma.min.css">
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link rel="stylesheet" href="static/css/index.css">
+    <link href="static/css/bulma.min.css" rel="stylesheet">
+    <link href="static/css/bulma-carousel.min.css" rel="stylesheet">
+    <link href="static/css/bulma-slider.min.css" rel="stylesheet">
+    <link href="static/css/fontawesome.all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+          rel="stylesheet">
+    <link href="static/css/index.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -75,8 +75,8 @@
                         <div class="publication-links">
                             <!-- PDF link -->
                             <span class="link-block">
-                    <a href="https://cs.gmu.edu/~zeng/papers/2025-security-nroottag.pdf" target="_blank"
-                       class="external-link button is-normal is-rounded is-dark">
+                    <a class="external-link button is-normal is-rounded is-dark" href="https://cs.gmu.edu/~zeng/papers/2025-security-nroottag.pdf"
+                       target="_blank">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
@@ -87,14 +87,26 @@
 
                             <!-- Github link -->
                             <span class="link-block">
-                    <a href="https://github.com/Chapoly1305/nroottag" target="_blank"
-                       class="external-link button is-normal is-rounded is-dark">
+                    <a class="external-link button is-normal is-rounded is-dark" href="https://github.com/Chapoly1305/nroottag"
+                       target="_blank">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code &amp; Discussion</span>
+                    <span>Code</span>
                   </a>
                 </span>
+
+
+                            <!-- YouTube link -->
+                            <span class="link-block">
+    <a class="external-link button is-normal is-rounded is-dark" href="https://youtu.be/RwjOpsFjVCU"
+       target="_blank">
+      <span class="icon">
+        <i class="fab fa-youtube"></i>
+      </span>
+      <span>Video</span>
+    </a>
+</span>
 
                         </div>
                     </div>
@@ -109,8 +121,8 @@
     <div class="container is-max-desktop">
         <div class="hero-body">
             <p style="display: flex; justify-content: center;">
-                <img src="static/images/main.png" alt="Attacking billions of devices"
-                     class="blend-img-background center-image" style="max-width: 80%; height: auto;"/>
+                <img alt="Attacking billions of devices" class="blend-img-background center-image"
+                     src="static/images/main.png" style="max-width: 80%; height: auto;"/>
             </p>
             <br>
             <p>
@@ -301,8 +313,8 @@
                 <div class="content">
                     <h2 class="title is-3">How Does It Work?</h2>
                     <p style="display: flex; justify-content: center;">
-                        <img src="static/images/architecture.webp" alt="Attack architecture"
-                             class="blend-img-background center-image" style="max-width: 80%; height: auto;"/>
+                        <img alt="Attack architecture" class="blend-img-background center-image"
+                             src="static/images/architecture.webp" style="max-width: 80%; height: auto;"/>
                     </p>
                     <p>
                         The attack works in four main steps:
@@ -425,12 +437,12 @@
                     </p>
 
                     <p style="display: flex; justify-content: center;">
-                        <img src="static/images/apple_security_update.png" alt="Apple security update"
-                             class="blend-img-background center-image" style="max-width: 80%; height: auto;"/>
+                        <img alt="Apple security update" class="blend-img-background center-image"
+                             src="static/images/apple_security_update.png" style="max-width: 80%; height: auto;"/>
                     </p>
                     <p style="display: flex; justify-content: center;">
-                        <img src="static/images/apple_acknowledgement.png" alt="Apple acknowledgement"
-                             class="blend-img-background center-image" style="max-width: 90%; height: auto;"/>
+                        <img alt="Apple acknowledgement" class="blend-img-background center-image"
+                             src="static/images/apple_acknowledgement.png" style="max-width: 90%; height: auto;"/>
                     </p>
 
                     <h2 class="title is-3">How Can I Protect Myself?</h2>
@@ -521,8 +533,8 @@
                                                                                 target="_blank">Nerfies</a> project
                         page.
                         You are free to borrow the of this website, we just ask that you link back to this page in the
-                        footer. <br> This website is licensed under a <a rel="license"
-                                                                         href="http://creativecommons.org/licenses/by-sa/4.0/"
+                        footer. <br> This website is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/"
+                                                                         rel="license"
                                                                          target="_blank">Creative
                         Commons Attribution-ShareAlike 4.0 International License</a>.
                     </p>
